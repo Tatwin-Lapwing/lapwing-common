@@ -31,9 +31,10 @@
   --color-cream: #faf8f2;
   --color-bark: #3e2a1f;
 
-  /* Typography — fallbacks so Tailwind registers the utilities */
-  --font-heading: serif;
-  --font-body: system-ui, sans-serif;
+}
+
+@utility font-heading {
+  font-family: var(--font-lora), serif;
 }
 
 html {
@@ -41,12 +42,9 @@ html {
 }
 
 body {
-  /* Override with next/font variables (available here via classes on <body>) */
-  --font-heading: var(--font-lora), serif;
-  --font-body: var(--font-geist-sans), system-ui, sans-serif;
   background-color: var(--color-cream);
   color: var(--color-moss-950);
-  font-family: var(--font-body);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
 /* Custom scrollbar */

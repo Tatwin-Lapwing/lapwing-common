@@ -14,7 +14,7 @@ export default function InvestmentThesis() {
       aria-labelledby="thesis-heading"
       className="bg-cream py-24 md:py-32 lg:py-40"
     >
-      <div className="mx-auto max-w-3xl px-6">
+      <div className="mx-auto max-w-4xl px-6">
         {/* Section heading */}
         <motion.div
           initial="hidden"

@@ -47,7 +47,7 @@ export default function Hero() {
       {/* Hero content */}
       <motion.div
         style={{ opacity: contentOpacity, y: contentY }}
-        className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
+        className="relative z-10 mx-auto flex h-full max-w-5xl flex-col items-center justify-center px-6 text-center"
       >
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -55,17 +55,9 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
           className="font-heading text-5xl leading-tight font-medium tracking-tight text-cream md:text-7xl lg:text-8xl"
         >
-          Lapwing Common
+          Investing in the restoration of Britain&rsquo;s natural heritage
         </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
-          className="mt-6 max-w-xl text-lg font-light tracking-wide text-earth-200 md:text-xl"
-        >
-          Investing in the restoration of Britain&rsquo;s natural heritage
-        </motion.p>
       </motion.div>
 
       {/* Scroll indicator */}
