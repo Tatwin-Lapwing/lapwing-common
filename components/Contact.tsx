@@ -38,7 +38,7 @@ function validateForm(data: FormData): FormErrors {
 }
 
 const inputStyles =
-  "w-full rounded-lg border border-moss-700 bg-white px-4 py-3 text-moss-900 placeholder:text-gray-400 transition-colors focus:border-moss-500 focus:ring-2 focus:ring-moss-500/20 focus:outline-none";
+  "w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-moss-900 placeholder:text-gray-400 transition-colors focus:border-moss-500 focus:ring-2 focus:ring-moss-500/20 focus:outline-none";
 
 const errorStyles = "mt-1 text-sm text-red-600";
 

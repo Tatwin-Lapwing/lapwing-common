@@ -1,24 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface TeamMember {
   name: string;
-  initials: string;
+  image: string;
   role: string;
   linkedIn: string;
 }
 
 const team: TeamMember[] = [
   {
-    name: "Edward Kerr",
-    initials: "EK",
+    name: "Tatwin Owen Edmunds",
+    image: "/team/tatwin.jpg",
     role: "Co-Founder",
     linkedIn: "#", // TODO: Replace with real LinkedIn profile URL
   },
   {
-    name: "Tatwin Owen Edmunds",
-    initials: "TE",
+    name: "Edward Kerr",
+    image: "/team/edward.jpg",
     role: "Co-Founder",
     linkedIn: "#", // TODO: Replace with real LinkedIn profile URL
   },
@@ -72,18 +73,14 @@ export default function Team() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="group"
             >
-              {/*
-                TODO: Replace placeholder with real team photo.
-                Use next/image with fill prop:
-                  <Image src="/team/edward-kerr.jpg" alt="..." fill className="object-cover" />
-              */}
-              <div className="relative flex aspect-[3/4] items-center justify-center overflow-hidden rounded-lg bg-moss-800 transition-all duration-500 group-hover:bg-moss-700">
-                <span
-                  className="font-heading text-7xl text-moss-600/40 transition-colors duration-500 group-hover:text-moss-500/40"
-                  aria-hidden="true"
-                >
-                  {member.initials}
-                </span>
+              <div className="relative aspect-[3/4] overflow-hidden rounded-lg bg-moss-800">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
 
               <div className="mt-6 flex items-end justify-between">
