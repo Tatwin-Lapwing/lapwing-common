@@ -15,13 +15,13 @@ const team: TeamMember[] = [
     name: "Tatwin Owen Edmunds",
     image: "/team/tatwin.jpg",
     role: "Co-Founder",
-    linkedIn: "#", // TODO: Replace with real LinkedIn profile URL
+    linkedIn: "https://www.linkedin.com/in/tatwin-owen-edmunds-7b708b46/", 
   },
   {
     name: "Edward Kerr",
     image: "/team/edward.jpg",
     role: "Co-Founder",
-    linkedIn: "#", // TODO: Replace with real LinkedIn profile URL
+    linkedIn: "https://www.linkedin.com/in/edwardkerr-me/", 
   },
 ];
 

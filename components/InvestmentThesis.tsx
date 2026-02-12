@@ -12,9 +12,9 @@ export default function InvestmentThesis() {
     <section
       id="thesis"
       aria-labelledby="thesis-heading"
-      className="bg-cream py-24 md:py-32 lg:py-40"
+      className="bg-cream py-24 md:min-h-screen md:flex md:items-center md:py-32 lg:py-40"
     >
-      <div className="mx-auto max-w-4xl px-6">
+      <div className="mx-auto w-full max-w-4xl px-6">
         {/* Section heading */}
         <motion.div
           initial="hidden"
@@ -43,11 +43,11 @@ export default function InvestmentThesis() {
           >
             Britain&rsquo;s natural landscapes stand at a critical inflection
             point. Decades of agricultural intensification have degraded soils,
-            depleted biodiversity, and diminished the ecosystem services on which
-            communities and economies depend. Lapwing Common was founded on the
-            conviction that ecological restoration and compelling financial
-            returns are not merely compatible&mdash;they are inextricably
-            linked.
+            depleted biodiversity, and diminished the ecosystem services on
+            which communities and economies depend. Lapwing Common was founded
+            on the conviction that ecological restoration and compelling
+            financial returns are not merely compatible&mdash;they are
+            inextricably linked.
           </motion.p>
 
           <motion.p
@@ -58,9 +58,9 @@ export default function InvestmentThesis() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Our strategy targets land assets across the United Kingdom with high
-            restoration potential: degraded peatlands, neglected ancient
-            woodlands, and underperforming agricultural holdings ripe for
-            rewilding. Through a combination of natural capital appreciation,
+            restoration potential: degraded peatlands, non-native low species
+            woodland, brownfield and other land not suitable for food
+            production. Through a combination of natural capital appreciation,
             biodiversity net gain credits, carbon sequestration revenue, and
             sustainable land management, we generate multi-layered returns that
             compound over time.
