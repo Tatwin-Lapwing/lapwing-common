@@ -239,7 +239,7 @@ export default function Contact() {
                   onChange={handleChange}
                   rows={5}
                   className={`${inputStyles} resize-none`}
-                  placeholder="Tell us about your interest in nature investment..."
+                  placeholder="Tell us how we can help..."
                 />
                 {errors.message && (
                   <p className={errorStyles} role="alert">

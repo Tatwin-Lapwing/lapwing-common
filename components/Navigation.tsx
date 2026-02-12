@@ -11,11 +11,33 @@ const navLinks = [
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const ids = ["hero", ...navLinks.map((l) => l.href.slice(1))];
+    const sections = ids
+      .map((id) => document.getElementById(id))
+      .filter(Boolean) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id === "hero" ? "" : entry.target.id);
+          }
+        }
+      },
+      { rootMargin: "-50% 0px -50% 0px" }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -47,7 +69,11 @@ export default function Navigation() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm uppercase tracking-[0.2em] text-earth-200/80 transition-colors hover:text-cream"
+                className={`text-sm uppercase tracking-[0.2em] transition-colors hover:text-cream ${
+                  activeSection === link.href.slice(1)
+                    ? "text-cream"
+                    : "text-earth-200/80"
+                }`}
               >
                 {link.label}
               </a>

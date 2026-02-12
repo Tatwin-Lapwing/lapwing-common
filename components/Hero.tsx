@@ -24,6 +24,7 @@ export default function Hero() {
 
   return (
     <section
+      id="hero"
       ref={sectionRef}
       aria-label="Hero"
       className="relative h-screen w-full overflow-hidden"
