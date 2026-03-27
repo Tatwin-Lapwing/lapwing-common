@@ -43,27 +43,28 @@ export default function Team() {
     <section
       id="team"
       aria-labelledby="team-heading"
-      className="bg-moss-950 py-24 md:py-32 lg:py-40"
+      className="bg-white py-24 md:py-32 lg:py-40"
     >
-      <div className="mx-auto max-w-4xl px-6">
+      <div className="mx-auto max-w-6xl px-6">
         {/* Section heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
+          className="mb-16 md:mb-24 flex flex-col items-center text-center md:items-start md:text-left"
         >
           <h2
             id="team-heading"
-            className="font-heading text-3xl text-cream md:text-4xl lg:text-5xl"
+            className="font-heading text-2xl font-medium text-moss-950 md:text-3xl lg:text-4xl"
           >
             Our Team
           </h2>
-          <div className="mt-4 h-[2px] w-16 bg-moss-500" />
+          <div className="mt-6 h-[1px] w-12 bg-moss-300" />
         </motion.div>
 
         {/* Team grid */}
-        <div className="mt-16 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12">
+        <div className="grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-24">
           {team.map((member, index) => (
             <motion.article
               key={member.name}
@@ -73,22 +74,24 @@ export default function Team() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="group"
             >
-              <div className="relative aspect-[3/4] overflow-hidden rounded-lg bg-moss-800">
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-earth-200">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
 
-              <div className="mt-6 flex items-end justify-between">
+              <div className="mt-6 flex items-start justify-between">
                 <div>
-                  <h3 className="font-heading text-2xl text-cream">
+                  <h3 className="font-heading text-2xl text-moss-950">
                     {member.name}
                   </h3>
-                  <p className="mt-1 text-earth-400">{member.role}</p>
+                  <p className="mt-2 text-xs font-medium uppercase tracking-[0.2em] text-moss-600">
+                    {member.role}
+                  </p>
                 </div>
 
                 <a
@@ -96,9 +99,9 @@ export default function Team() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${member.name} on LinkedIn`}
-                  className="text-earth-400 transition-colors hover:text-cream"
+                  className="text-moss-400 transition-colors hover:text-moss-900"
                 >
-                  <LinkedInIcon className="h-5 w-5" />
+                  <LinkedInIcon className="mt-1 h-5 w-5" />
                 </a>
               </div>
             </motion.article>
