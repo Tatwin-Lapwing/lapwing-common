@@ -35,7 +35,7 @@ export default function Hero() {
         </h1>
         
         <p className="mx-auto mt-8 max-w-2xl text-lg font-light leading-relaxed text-moss-900 md:text-xl">
-          A UK-based natural capital fund dedicated to ecological recovery, sustainable land management, and enduring returns.
+          A UK-based specialist loans company dedicated to ecological recovery, sustainable land management, and enduring returns.
         </p>
       </motion.div>
     </section>

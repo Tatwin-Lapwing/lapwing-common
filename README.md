@@ -1,6 +1,6 @@
 # Lapwing Common
 
-Landing page for **Lapwing Common**, a UK nature investment fund by TEEK Group Limited.
+Landing page for **Lapwing Common**, a UK-based specialist loans company by TEEK Group Limited.
 
 Built with Next.js 16, TypeScript, Tailwind CSS 4, and Framer Motion.
 
@@ -34,15 +34,15 @@ src="/hero.jpg"
 
 Team member cards show initial placeholders. To add real photos:
 
-1. Place photos in `public/team/` (e.g., `edward-kerr.jpg`, `tatwin-owen-edmunds.jpg`)
+1. Place photos in `public/team/` (e.g., `hugo.jpeg`, `tatwin.jpg`)
 2. Update `components/Team.tsx` — replace the placeholder `<div>` with:
 
 ```tsx
 import Image from "next/image";
 
 <Image
-  src="/team/edward-kerr.jpg"
-  alt="Edward Kerr"
+  src="/team/hugo.jpeg"
+  alt="Hugo Slade"
   fill
   className="object-cover"
   sizes="(max-width: 768px) 100vw, 50vw"

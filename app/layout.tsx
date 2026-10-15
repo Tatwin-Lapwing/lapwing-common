@@ -14,9 +14,9 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Lapwing Common | UK Nature Investment Fund",
+  title: "Lapwing Common | UK Nature Specialist Loans Company",
   description:
-    "Investing in the restoration of Britain's natural heritage. Lapwing Common is a UK-based nature investment fund dedicated to ecological recovery and sustainable returns.",
+    "Investing in the restoration of Britain's natural heritage. Lapwing Common is a UK-based specialist loans company dedicated to ecological recovery and sustainable returns.",
   keywords: [
     "nature investment",
     "UK conservation",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "TEEK Group Limited" }],
   openGraph: {
-    title: "Lapwing Common | UK Nature Investment Fund",
+    title: "Lapwing Common | UK Nature Specialist Loans Company",
     description:
       "Investing in the restoration of Britain's natural heritage.",
     type: "website",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lapwing Common | UK Nature Investment Fund",
+    title: "Lapwing Common | UK Nature Specialist Loans Company",
     description:
       "Investing in the restoration of Britain's natural heritage.",
   },

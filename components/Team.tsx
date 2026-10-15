@@ -7,7 +7,7 @@ interface TeamMember {
   name: string;
   image: string;
   role: string;
-  linkedIn: string;
+  linkedIn?: string;
 }
 
 const team: TeamMember[] = [
@@ -18,10 +18,10 @@ const team: TeamMember[] = [
     linkedIn: "https://www.linkedin.com/in/tatwin-owen-edmunds-7b708b46/", 
   },
   {
-    name: "Edward Kerr",
-    image: "/team/edward.jpg",
+    name: "Hugo Slade",
+    image: "/team/hugo.jpeg",
     role: "Co-Founder",
-    linkedIn: "https://www.linkedin.com/in/edwardkerr-me/", 
+    linkedIn: "https://www.linkedin.com/in/hugo-slade/",
   },
 ];
 
@@ -94,15 +94,17 @@ export default function Team() {
                   </p>
                 </div>
 
-                <a
-                  href={member.linkedIn}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${member.name} on LinkedIn`}
-                  className="text-moss-400 transition-colors hover:text-moss-900"
-                >
-                  <LinkedInIcon className="mt-1 h-5 w-5" />
-                </a>
+                {member.linkedIn && (
+                  <a
+                    href={member.linkedIn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${member.name} on LinkedIn`}
+                    className="text-moss-400 transition-colors hover:text-moss-900"
+                  >
+                    <LinkedInIcon className="mt-1 h-5 w-5" />
+                  </a>
+                )}
               </div>
             </motion.article>
           ))}
